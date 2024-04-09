@@ -22,7 +22,10 @@ jobs:
     - name: show dir
       run: ls -la
     - name: pwd
-      run: pwd
+      run: |
+        echo " github.event_name: ${{ github.event_name }}
+        echo " github.action: ${{ github.action }}
+        
       
   testing-2:
     needs: [testing]
