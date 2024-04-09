@@ -33,6 +33,6 @@ jobs:
     - name: sleep_2
       run: sleep 1
     - name: prnt
-      run: echo "env.App_name   ===   env.Package_name"
+      run: echo "${{ env.App_name }}  ===   ${{ env.Package_name }}"
 
       
