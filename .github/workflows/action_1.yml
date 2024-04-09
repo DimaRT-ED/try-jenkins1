@@ -18,8 +18,8 @@ jobs:
     - name: sleep
       run: sleep 3
 
-
   testing-2:
+    needs: [testing]
     runs-on: ubuntu-latest
     steps:
     - name: bbb
