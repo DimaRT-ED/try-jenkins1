@@ -18,10 +18,12 @@ jobs:
     - name: aaa
       run: echo "HELLO TESTING"
     - name: sleep
-      run: sleep 3
+      run: sleep 1
     - name: show dir
       run: ls -la
-
+    - name: pwd
+      run: pwd
+      
   testing-2:
     needs: [testing]
     runs-on: ubuntu-latest
@@ -29,7 +31,8 @@ jobs:
     - name: bbb
       run: echo "HELLO TESTING-2"
     - name: sleep_2
-      run: sleep 3
-    - name: pwd
-      run: pwd
+      run: sleep 1
+    - name: prnt
+      run: echo "env.App_name   ===   env.Package_name"
+
       
