@@ -1,0 +1,26 @@
+#-------------------------------
+# first git action
+# created by Dag
+#-------------------------------
+name: My-first-action
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: aaa
+      run: echo "HELLO TESTING"
+
+
+  testing-2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: bbb
+      run: echo "HELLO TESTING-2"
+      
+      
