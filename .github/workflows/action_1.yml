@@ -3,7 +3,9 @@
 # created by Dag
 #-------------------------------
 name: My-first-action
-
+env:
+  App_name: "First_app"
+  Package_name: "first_app_version-${{ github.sha }}"
 on:
   push:
     branches: 
@@ -17,6 +19,8 @@ jobs:
       run: echo "HELLO TESTING"
     - name: sleep
       run: sleep 3
+    - name: show dir
+      run: ls -la
 
   testing-2:
     needs: [testing]
@@ -24,7 +28,8 @@ jobs:
     steps:
     - name: bbb
       run: echo "HELLO TESTING-2"
-    
     - name: sleep_2
       run: sleep 3
+    - name: pwd
+      run: pwd
       
